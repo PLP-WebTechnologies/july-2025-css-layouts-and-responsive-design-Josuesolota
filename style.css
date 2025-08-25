@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,16 +14,16 @@ body {
     padding: 0 20px;
 }
 
-/* --- Layout da Página usando CSS Grid --- */
+/* --- Page Layout using CSS Grid --- */
 
 .container {
-    /* Exemplo de CSS Grid: Define o layout principal */
+    /* CSS Grid example: Defines the main layout */
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Três partes para o conteúdo, uma para a sidebar */
-    gap: 30px; /* Espaço entre as colunas */
+    grid-template-columns: 3fr 1fr; /* Three parts for content, one for the sidebar */
+    gap: 30px; /* Space between columns */
 }
 
-/* --- Cabeçalho e Navegação --- */
+/* --- Header and Navigation --- */
 
 .header {
     background: #333;
@@ -48,9 +48,9 @@ body {
 }
 
 .nav ul {
-    /* Exemplo de Flexbox: Alinha os itens do menu horizontalmente */
+    /* Flexbox example: Aligns menu items horizontally */
     display: flex;
-    justify-content: center; /* Centraliza os itens na horizontal */
+    justify-content: center; /* Centers the items horizontally */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -68,7 +68,7 @@ body {
     color: #ffa500;
 }
 
-/* --- Conteúdo Principal e Cards de Posts --- */
+/* --- Main Content and Post Cards --- */
 
 .main-content {
     background-color: #fff;
@@ -78,10 +78,10 @@ body {
 }
 
 .posts-grid {
-    /* Exemplo de CSS Grid para os cards de posts */
+    /* CSS Grid example for post cards */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas que se ajustam */
-    gap: 20px; /* Espaço entre os cards */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columns that adjust automatically */
+    gap: 20px; /* Space between cards */
     margin-top: 20px;
 }
 
@@ -119,7 +119,7 @@ body {
     margin-top: 10px;
 }
 
-/* --- Barra Lateral --- */
+/* --- Sidebar --- */
 
 .sidebar {
     background-color: #fff;
@@ -150,7 +150,7 @@ body {
     color: #ffa500;
 }
 
-/* --- Rodapé --- */
+/* --- Footer --- */
 
 .footer {
     text-align: center;
@@ -160,27 +160,27 @@ body {
     margin-top: 20px;
 }
 
-/* --- Media Queries para Responsividade --- */
+/* --- Media Queries for Responsiveness --- */
 
-/* Tablet (768px a 1024px) */
+/* Tablet (768px to 1024px) */
 @media (max-width: 1024px) {
     .container {
-        /* Aumenta a lacuna para melhor espaçamento no tablet */
+        /* Increases the gap for better spacing on tablets */
         gap: 20px;
     }
 }
 
-/* Telemóvel (até 767px) */
+/* Mobile (up to 767px) */
 @media (max-width: 767px) {
     .container {
-        /* Transforma o layout Grid em uma única coluna */
+        /* Changes the Grid layout to a single column */
         grid-template-columns: 1fr;
     }
 
     .nav ul {
-        /* Altera a direção do Flexbox para coluna */
+        /* Changes Flexbox direction to a column */
         flex-direction: column;
-        align-items: center; /* Centraliza os itens verticalmente */
+        align-items: center; /* Centers the items vertically */
     }
 
     .nav li {
@@ -192,7 +192,7 @@ body {
     }
 
     .posts-grid {
-        /* Garante que os cards se alinhem em uma única coluna em ecrãs menores */
+        /* Ensures cards align in a single column on smaller screens */
         grid-template-columns: 1fr;
     }
 }
