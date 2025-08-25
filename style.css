@@ -100,7 +100,7 @@ body {
 
 .post-card img {
     max-width: 100%;
-    height: auto; /* A imagem irá manter a sua proporção original */
+    height: auto; /* The image will maintain its original proportion */
     border-radius: 5px;
 }
 
@@ -160,27 +160,27 @@ body {
     margin-top: 20px;
 }
 
-/* --- Media Queries para Responsividade --- */
+/* --- Media Queries for Responsiveness --- */
 
-/* Tablet (768px a 1024px) */
+/* Tablet (768px to 1024px) */
 @media (max-width: 1024px) {
     .container {
-        /* Aumenta a lacuna para melhor espaçamento no tablet */
+        /* Increases the gap for better spacing on tablets */
         gap: 20px;
     }
 }
 
-/* Telemóvel (até 767px) */
+/* Mobile (up to 767px) */
 @media (max-width: 767px) {
     .container {
-        /* Transforma o layout Grid em uma única coluna */
+        /* Changes the Grid layout to a single column */
         grid-template-columns: 1fr;
     }
 
     .nav ul {
-        /* Altera a direção do Flexbox para coluna */
+        /* Changes Flexbox direction to a column */
         flex-direction: column;
-        align-items: center; /* Centraliza os itens verticalmente */
+        align-items: center; /* Centers the items vertically */
     }
 
     .nav li {
@@ -192,7 +192,7 @@ body {
     }
 
     .posts-grid {
-        /* Garante que os cards se alinhem em uma única coluna em ecrãs menores */
+        /* Ensures cards align in a single column on smaller screens */
         grid-template-columns: 1fr;
     }
 }
