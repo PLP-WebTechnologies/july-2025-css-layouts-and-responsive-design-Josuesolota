@@ -1,0 +1,198 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- Layout da Página usando CSS Grid --- */
+
+.container {
+    /* Exemplo de CSS Grid: Define o layout principal */
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Três partes para o conteúdo, uma para a sidebar */
+    gap: 30px; /* Espaço entre as colunas */
+}
+
+/* --- Cabeçalho e Navegação --- */
+
+.header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.header p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.nav {
+    background: #444;
+    padding: 1rem 0;
+}
+
+.nav ul {
+    /* Exemplo de Flexbox: Alinha os itens do menu horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza os itens na horizontal */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav li a:hover {
+    color: #ffa500;
+}
+
+/* --- Conteúdo Principal e Cards de Posts --- */
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.posts-grid {
+    /* Exemplo de CSS Grid para os cards de posts */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas que se ajustam */
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 20px;
+}
+
+.post-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.post-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.read-more {
+    display: inline-block;
+    background: #ffa500;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* --- Barra Lateral --- */
+
+.sidebar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #555;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.sidebar li a:hover {
+    color: #ffa500;
+}
+
+/* --- Rodapé --- */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Tablet (768px a 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        /* Aumenta a lacuna para melhor espaçamento no tablet */
+        gap: 20px;
+    }
+}
+
+/* Telemóvel (até 767px) */
+@media (max-width: 767px) {
+    .container {
+        /* Transforma o layout Grid em uma única coluna */
+        grid-template-columns: 1fr;
+    }
+
+    .nav ul {
+        /* Altera a direção do Flexbox para coluna */
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+
+    .nav li {
+        margin: 5px 0;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .posts-grid {
+        /* Garante que os cards se alinhem em uma única coluna em ecrãs menores */
+        grid-template-columns: 1fr;
+    }
+}
